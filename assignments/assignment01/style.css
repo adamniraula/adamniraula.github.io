@@ -1,0 +1,23 @@
+body {
+    background-color: lightsteelblue; /* softer blue */
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: mediumvioletred; /* deeper magenta */
+    color: white;
+}
+
+td, th {
+    border: 1px solid mediumvioletred;
+    padding: 6px;
+}
+
+/* Typography */
+h1 {
+    color: darkgreen;
+}
