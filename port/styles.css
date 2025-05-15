@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+  background: 
+    url('images/port-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #2C3E50;
+}
+
+/* wrapper for contrast */
+#content {
+  width: 80%;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 8px;
+}
+
+/* header */
+#site-header h1 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+#author {
+  text-align: center;
+  font-weight: bold;
+  color: #34495E;
+}
+
+/* description */
+#description p {
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+/* assignments list */
+#assignments h2 {
+  color: #2C3E50;
+  margin-bottom: 10px;
+}
+#assignments ol {
+  padding-left: 0;
+  list-style-position: inside;
+}
+#assignments li {
+  margin: 8px 0;
+}
+#assignments a {
+  text-decoration: none;       /* remove underline */
+  color: #2980B9;              /* main link color */
+  background-color: #ECF0F1;   /* subtle button look */
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+#assignments a:hover {
+  background-color: #BDC3C7;
+  color: #1B4F72;
+}
+
+/* footer */
+#site-footer p {
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 40px;
+  color: #555;
+}

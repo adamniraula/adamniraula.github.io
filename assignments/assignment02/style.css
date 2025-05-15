@@ -1,0 +1,86 @@
+/* 1. Element selectors */
+body {
+    background: url('images/wetlands-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Georgia', serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. ID selectors */
+#content {
+    background-color: rgba(245, 245, 220, 0.9); /* beige-ish overlay */
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+#main-nav ul {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: center;
+}
+
+#main-nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#main-nav a {
+    text-decoration: none;
+    background-color: #556B2F;   /* dark olive green */
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+#main-nav a:hover {
+    background-color: #8FBC8F;   /* dark sea green */
+    color: #333;
+}
+
+#main-content {
+    padding: 10px;
+}
+
+/* 3. Class selectors */
+.image-container {
+    text-align: center;
+}
+
+.styled-img {
+    width: 45%;
+    margin: 10px;
+    border: 2px solid #556B2F;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.styled-table th,
+.styled-table td {
+    border: 1px solid #556B2F;
+    padding: 8px;
+    text-align: left;
+}
+
+.styled-table th {
+    background-color: #8FBC8F;
+}
+
+.styled-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/*Typography*/ 
+header h1,
+#main-content h2,
+footer p {
+  text-align: center;
