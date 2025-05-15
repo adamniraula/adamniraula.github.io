@@ -1,10 +1,15 @@
-body {
+body { 
   margin: 0;
   padding: 0;
   font-family: 'Georgia', serif;
-  background: 
-    url('images/port-bg.jpg') no-repeat center center fixed;
+
+  /* fallback background color */
+  background-color: #F0F4F8;
+
+  /* then the image */
+  background: url('images/images.png') no-repeat center center fixed;
   background-size: cover;
+
   color: #2C3E50;
 }
 
@@ -49,9 +54,9 @@ body {
   margin: 8px 0;
 }
 #assignments a {
-  text-decoration: none;       /* remove underline */
+  text-decoration: none;   
   color: #2980B9;              /* main link color */
-  background-color: #ECF0F1;   /* subtle button look */
+  background-color: #ECF0F1;  
   padding: 6px 12px;
   border-radius: 4px;
   transition: background-color 0.2s;
