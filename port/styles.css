@@ -19,6 +19,7 @@ header, footer, .main-area {
     margin: 10px 0;
     background: white;
     border-radius: 8px;
+    text-align: center;
 }
 #author {
     text-align: center;
