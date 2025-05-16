@@ -1,0 +1,149 @@
+/* Reset & Base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F0F1E8;
+  color: #446A6F;
+}
+#content {
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+/* Header */
+header {
+  background-color: #EFEBD8;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #D3D0C4;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+}
+nav .columns {
+  display: flex;
+  flex-direction: column;
+}
+nav .nav-list li {
+  background-color: #D97F7F;
+  text-align: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #FFF;
+}
+nav .nav-list li:last-child {
+  border-bottom: none;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+}
+
+/* Main Areas */
+.main-area {
+  display: flex;
+  margin: 10px 0;
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.one { flex: 1; }
+.two { flex: 2; }
+.four { flex: 4; }
+
+.idea {
+  padding: 15px;
+  background: #EFEBD8;
+  border: 1px solid #D3D0C4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.idea img {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 10px;
+}
+.idea h2 {
+  margin: 10px 0;
+}
+.idea p {
+  font-size: 0.9em;
+  text-align: center;
+}
+
+/* Aside */
+aside {
+  background-color: #D97F7F;
+  padding: 15px;
+  color: white;
+}
+aside h2 {
+  margin-bottom: 10px;
+}
+aside ul li {
+  margin: 5px 0;
+}
+
+/* The gallery photos */
+.photo {
+  padding: 10px;
+}
+#photo.columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-around;
+}
+#photo section {
+  background-color: #446A6F;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  flex: 1 1 30%;
+}
+#photo section img {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 10px;
+  display: block;
+}
+#photo h3 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+#photo p {
+  font-size: 0.9em;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background-color: #D97F7F;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+/* Media */
+@media screen and (min-width: 768px) {
+  nav .columns {
+    flex-direction: row;
+  }
+  nav .nav-list li {
+    border-bottom: none;
+    border-right: 1px solid #FFF;
+  }
+  nav .nav-list li:last-child {
+    border-right: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-area {
+    flex-direction: column;
+  }
+}
