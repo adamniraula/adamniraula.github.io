@@ -61,6 +61,52 @@ header, footer, .main-area {
     font-size: 0.9em;
     line-height: 1.4;
 }
+#projects {
+  /* add some breathing room */
+  margin: 40px 0;
+}
+
+#projects h2 {
+  text-align: center;
+  font-size: 1.6em;
+  margin-bottom: 20px;
+}
+
+/* reuse your .columns & .one flex rules to get the two-up layout */
+#projects .columns {
+  display: flex;
+  gap: 20px;
+}
+
+/* Make each project panel stretch equally */
+.project-item.one {
+  flex: 1;
+}
+
+/* the box inside the link */
+.project-box {
+  background-color: #ECF0F1;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: left;
+  transition: transform 0.2s;
+}
+
+/* hover “pop” effect for a bit of flair */
+.project-box:hover {
+  transform: translateY(-4px);
+}
+
+/* titles and copy inside each project box */
+.project-box h3 {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+.project-box p {
+  margin: 0.5em 0 0;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
