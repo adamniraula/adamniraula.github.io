@@ -1,0 +1,89 @@
+/* styles.css */
+/* copied/adapted from class starter CSS */
+/* —————— colors —————— */
+:root {
+  --bg: #f5f7fa;
+  --card: #ffffff;
+  --primary: #3a6ea5;
+  --accent: #e27d60;
+  --text: #333333;
+}
+
+/* —————— base —————— */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+.container {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0 10px;
+}
+
+/* —————— header & footer —————— */
+header, footer {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  color: var(--primary);
+}
+header h2 {
+  margin: 5px 0 0;
+  color: var(--accent);
+}
+footer {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: var(--text);
+}
+
+/* —————— columns —————— */
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px -10px;
+}
+.col {
+  background: var(--card);
+  flex: 1;
+  min-width: 260px;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+.col h3 {
+  margin-top: 0;
+  color: var(--primary);
+}
+.clickable-area {
+  cursor: pointer;
+  padding: 10px;
+  min-height: 120px;
+}
+
+/* —————— form controls —————— */
+input[type=range] {
+  width: 80%;
+  margin: 10px 0;
+}
+
+/* —————— utilities —————— */
+.hidden { display: none; }
+
+/* —————— stack on mobile —————— */
+@media (max-width: 600px) {
+  .columns {
+    flex-direction: column;
+  }
+  .col {
+    margin: 10px 0;
+  }
+}

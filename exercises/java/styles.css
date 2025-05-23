@@ -1,0 +1,169 @@
+/* Structure */
+:root {
+    --main-background:#84B1D9;
+    --secondary-color:navy;
+    --front-color:white;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:var(--main-background);
+}
+
+header, .main-area, footer {
+    padding:5px;
+    margin:10px 0px;
+    background:var(--front-color);
+    border-radius: 5px;
+}
+
+.main-area section {
+    background:var(--secondary-color);
+    color:var(--front-color);
+    margin:10px;
+    border-radius: 5px;
+    padding:5px;
+}
+
+/* Images */
+img {
+    max-width:100%;
+}
+
+/* Navigation */
+#main-nav ul {
+    padding-left:0;
+    list-style-type: none;
+}
+
+#main-nav li {
+    margin-right:10px;
+}
+
+#main-nav a {
+    display:block;
+    text-decoration: none;
+    padding:5px;
+    background-color:var(--secondary-color);
+    color:white;
+    border-bottom:1px solid var(--front-color);
+}
+
+#toggle-nav div {
+    width:25px;
+    height:2px;
+    background:var(--secondary-color);
+    margin:6px 0;
+}
+
+.image-bold {
+    border:3px solid pink;
+}
+
+/* Typography */
+h1, h2 {
+    text-align: center;
+}
+
+/* Hide and Show */
+.hidden {
+    display:none;
+}
+
+.hide-small {
+    display:none;
+}
+
+
+/* Media Queries */
+/* Portrait Tablet */
+@media screen and (min-width: 600px) {
+    .hide-small {
+        display:flex;
+    }
+
+    #toggle-nav {
+        display:none;
+    }
+
+    #main-nav ul {
+        width:fit-content;
+        margin:auto;
+        display:flex;
+    }
+    
+    #main-nav a {
+        border-bottom:1px solid transparent;
+        background-color:white;
+        padding:2px;
+        color:navy;
+    }
+
+    #main-nav a:hover {
+        border-bottom:1px solid var(--secondary-color);
+    }
+
+    .main-area {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .main-area section {
+        width:30%;
+    }
+}
+
+/* Landscape Tablet */
+@media screen and (min-width: 768px) {
+    header, footer, .main-area {
+        width:85%;
+        margin:10px auto;
+    }
+
+    /* Columns */
+    .columns {
+        display:flex;
+    }
+
+    .pic-area {
+        margin:0 10px 10px;
+    }
+
+    #gallery {
+        flex-wrap:wrap;
+        justify-content: space-around;
+    }
+
+    #gallery section {
+        max-width:20%;
+    }
+
+    .one {
+        flex:1;
+    }
+
+    .two {
+        flex:2;
+    }
+
+    .three {
+        flex:3;
+    }
+
+    .four {
+        flex:4;
+    }
+
+}
+
+/* Labtop / Desktop */
+@media screen and (min-width: 992px) {
+    header, footer, .main-area {
+        width:70%;
+    }
+}
+
+/* Extra Large Devices */
+@media screen and (min-width: 1600px) {
+    
+}

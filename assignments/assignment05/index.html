@@ -1,0 +1,50 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 7</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Adapted from class starter CSS -->
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Assignment 7</h1>
+      <h2>Introduction to JavaScript</h2>
+    </header>
+
+    <div class="columns">
+      <!-- Ice Cream Column -->
+      <div class="col ice-col">
+        <h3>Ice Cream</h3>
+        <div id="ice-area" class="clickable-area">
+          <!-- clicks add “I like IceCream!” here -->
+        </div>
+      </div>
+
+      <!-- Pick a Number Column -->
+      <div class="col slider-col">
+        <h3>Pick a Number</h3>
+        <input type="range" id="num-slider" min="1" max="5" value="3">
+        <p id="num-output">I want 3 ice creams!</p>
+      </div>
+
+      <!-- Image Change Column -->
+      <div class="col image-col">
+        <h3>Image Change</h3>
+        <button id="show-btn">Show Ice Cream</button>
+        <img
+          id="ice-image"
+          src="C:\Users\adamo\Desktop\csce242\adamniraula.github.io\assignments\assignment05\images\icecream.jpg"
+          alt="Delicious ice cream"
+          class="hidden"
+        >
+      </div>
+    </div>
+
+    <footer>@adamniraula.com</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
