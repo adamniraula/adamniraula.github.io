@@ -38,74 +38,41 @@ header, footer, .main-area {
 .columns {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 .one {
-    flex: 1;
+    flex: 1 1 200px;
 }
 
 /* Assignment Items */
-.assignment-item img {
+.assignment-item img, .project-box img {
     display: block;
     margin: 0 auto 10px;
-    width: 200px;       
-    height: 150px;      
-    object-fit: cover;  
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
     border-radius: 4px;
 }
-.assignment-item h2 {
-    text-align: center;
-    margin-bottom: 10px;
+.assignment-item h3, .project-box h3 {
+    margin-top: 0;
+    font-size: 1.2em;
 }
-.assignment-item p {
+.assignment-item p, .project-box p {
     text-align: center;
     font-size: 0.9em;
     line-height: 1.4;
 }
-#projects {
-  /* add some breathing room */
-  margin: 40px 0;
-}
 
-#projects h2 {
-  text-align: center;
-  font-size: 1.6em;
-  margin-bottom: 20px;
-}
-
-/* reuse your .columns & .one flex rules to get the two-up layout */
-#projects .columns {
-  display: flex;
-  gap: 20px;
-}
-
-/* Make each project panel stretch equally */
-.project-item.one {
-  flex: 1;
-}
-
-/* the box inside the link */
+/* Project Box Hover */
 .project-box {
-  background-color: #ECF0F1;
-  padding: 20px;
-  border-radius: 6px;
-  text-align: left;
-  transition: transform 0.2s;
+    background-color: #ECF0F1;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: left;
+    transition: transform 0.2s;
 }
-
-/* hover “pop” effect for a bit of flair */
 .project-box:hover {
-  transform: translateY(-4px);
-}
-
-/* titles and copy inside each project box */
-.project-box h3 {
-  margin-top: 0;
-  font-size: 1.2em;
-}
-.project-box p {
-  margin: 0.5em 0 0;
-  font-size: 0.9em;
-  line-height: 1.4;
+    transform: translateY(-4px);
 }
 
 /* Media Queries */
