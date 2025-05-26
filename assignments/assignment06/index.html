@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Assignment 8 – If Statements</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Assignment 6</h1>
+      <h2>If Statements</h2>
+      <nav class="nav-bar">
+        <span id="tab-speed" class="nav-item">Exercise 1</span>
+        <span id="tab-art"   class="nav-item">Exercise 2</span>
+      </nav>
+    </header>
+
+    <!-- Exercise 1: Speeding -->
+    <section id="speeding" class="active">
+      <h3>Let's Speed</h3>
+      <input type="range" id="speed-slider" min="1" max="50" value="25">
+      <div>
+        <button id="btn-go">Go</button>
+        <button id="btn-stop">Stop</button>
+      </div>
+      <div class="speed-container">
+        <img id="bike"
+             class="bike"
+             src="https://cdn-icons-png.flaticon.com/512/2972/2972185.png"
+             alt="bike">
+      </div>
+    </section>
+
+    <!-- Exercise 2: CSS Art -->
+    <section id="art">
+      <h3>CSS Art</h3>
+      <div>
+        <button class="art-btn" data-shape="moon">Moon</button>
+        <button class="art-btn" data-shape="star">Star</button>
+        <button class="art-btn" data-shape="cloud">Cloud</button>
+      </div>
+      <div id="art-area" class="css-art"></div>
+    </section>
+
+    <footer>@adamniraula.com</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
