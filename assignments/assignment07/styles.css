@@ -1,0 +1,74 @@
+/* global reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: Arial, sans-serif;
+  background: #F8F8F8;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+/* header */
+header h1 { color: #3A6F6C; font-size: 2.5rem; }
+header h2 { color: #F28C8C; margin-bottom: 20px; }
+
+/* button styling */
+button {
+  padding: 8px 16px;
+  background: #F28C8C;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+/* houses container */
+#houses-container {
+  margin-top: 20px;
+}
+
+/* each house is pure CSS: */
+.house {
+  display: inline-block;
+  margin: 0 10px;
+  text-align: center;
+}
+.house .roof {
+  /* CSS triangle pointing down */
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 40px solid #3A6F6C;
+}
+.house .base {
+  width: 100px;
+  height: 80px;
+  background: #5DAE8B;
+  position: relative;
+}
+.house .door {
+  width: 30px;
+  height: 50px;
+  background: #F8F8F8;
+  position: absolute;
+  bottom: 0;
+  left: 35px;
+}
+
+/* exercise section */
+#exercise-section {
+  margin-top: 30px;
+}
+#stick-figure {
+  width: 120px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+/* footer */
+footer p {
+  color: #777;
+  margin-top: 40px;
+}
