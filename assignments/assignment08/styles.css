@@ -1,0 +1,136 @@
+/* vars */
+:root {
+  --bg: #F4F4E8;
+  --accent: #E38E8C;
+  --popup-bg: #FFFCEC;
+}
+
+/* reset & basics */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: sans-serif;
+  background: var(--bg);
+  color: #333;
+  line-height: 1.4;
+}
+
+/* container */
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* header */
+.assignment-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.assignment-header h1 {
+  color: #6D928A;
+}
+.subtitle {
+  color: #E38E8C;
+  margin-left: 0.5rem;
+}
+.menu {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* gallery grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+/* card */
+.card {
+  position: relative;
+  border: 6px solid var(--accent);
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  background: white;
+}
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* overlay title */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(227, 142, 140, 0.9);
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+.card:hover .overlay {
+  transform: translateY(0);
+}
+
+/* credit */
+.credit {
+  font-size: 0.8rem;
+  text-align: right;
+  margin-top: 1rem;
+}
+.credit a {
+  color: var(--accent);
+}
+
+/* popup backdrop */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 10;
+}
+.popup.hidden {
+  display: none;
+}
+
+/* popup card */
+.popup-content {
+  background: var(--popup-bg);
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  text-align: center;
+}
+.popup-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto 0;
+}
+
+/* close button */
+.close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.8rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--accent);
+}
