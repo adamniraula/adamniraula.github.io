@@ -1,0 +1,90 @@
+/* =================== Basic page styling =================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ece3d3;
+  color: #333;
+}
+
+.header {
+  text-align: center;
+  background-color: #dcd0c0;
+  padding: 1rem 0;
+  border-bottom: 1px solid #bbb;
+}
+
+.header h1 {
+  color: #8b2f5c;
+  margin-bottom: 0.25rem;
+}
+
+.header p {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* =================== Gallery layout =================== */
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.hotdog-card {
+  position: relative;
+  width: 220px;
+  height: 140px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #c8b18f;
+  border-radius: 6px;
+  background-color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.hotdog-card:hover {
+  transform: scale(1.03);
+}
+
+.hotdog-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay (name) that appears on hover */
+
+.hotdog-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  padding: 0.4rem 0;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hotdog-card:hover .hotdog-overlay {
+  opacity: 1;
+}
+
+
+
+.credits {
+  text-align: center;
+  color: #555;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
