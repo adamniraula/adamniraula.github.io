@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Part 4 – About Us | NVIDIA Pulse</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- =========================
+       HEADER (with hamburger)
+       ========================= -->
+  <header class="site-header">
+    <div class="header-top container">
+      <img src="images/nvidia pulse.png" alt="NVIDIA Pulse Logo" class="site-logo" />
+      <div class="divider"></div>
+      <h1 class="site-title">NVIDIA Pulse</h1>
+    </div>
+    <div class="nav-container container">
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav">
+        <ul class="nav-list" id="navList">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="developers.html">Developers</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="about.html" class="active">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================
+       MAIN CONTENT
+       ================ -->
+  <main>
+    <div class="about-hero container">
+      <div class="rotated-label">ABOUT US</div>
+      <div class="hero-image">
+        <!-- Real “About Us” illustration -->
+        <img src="images/collab.png" alt="Illustration of community collaboration" />
+      </div>
+      <div class="rotated-label">ABOUT US</div>
+    </div>
+
+    <div class="about-text-content container">
+      <p>
+        NVIDIA Pulse was founded in 2018 to bring together graphics engineers, game developers, and AI researchers under one roof. From day one, our ambition has been to showcase the latest in real-time ray tracing, deep learning AI, and professional rendering pipelines. 
+      </p>
+      <p>
+        Over the years, we’ve grown into a thriving global community of over 25,000 members. Each month, our community publishes open-source tutorials, hosts live webinars with hardware experts, and shares best practices on forums covering everything from CUDA optimization to multi-GPU scaling. 
+      </p>
+      <p>
+        Today, NVIDIA Pulse is not just a website—it’s an ecosystem. We partner with major tech conferences, run student hackathons for graphics hack-jams, and collaborate directly with engineering teams inside NVIDIA to preview next-gen GPUs. Our mission is to empower everyone—from first-time Linux users building a Vulkan renderer to seasoned engineers on the bleeding edge of AI-powered ray tracing.
+      </p>
+    </div>
+  </main>
+
+  <!-- ================
+       FOOTER
+       ================ -->
+  <footer class="site-footer">
+    <div class="container">© 2025 Adam Niraula</div>
+  </footer>
+
+  <!-- =========================
+       JAVASCRIPT: Hamburger Toggle
+       ========================= -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const hamburger = document.getElementById('hamburgerBtn');
+      const navList = document.getElementById('navList');
+      hamburger.addEventListener('click', () => {
+        navList.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

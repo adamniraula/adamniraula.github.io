@@ -1,0 +1,616 @@
+/* ==========================
+   Part 4 Color Scheme
+   ========================== */
+:root {
+  /* Dark theme background */
+  --bg: #121212;
+  /* Off-white text */
+  --text: #E2E2E2;
+  /* Darker gray for secondary backgrounds, borders */
+  --muted: #2F2F2F;
+  /* NVIDIA green accent */
+  --primary: #76B900;
+
+  /* Spacing & max-width */
+  --gap: 1rem;
+  --maxw: 1200px;
+}
+
+/* ==========================
+   GLOBAL RESET & BASE
+   ========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: var(--gap);
+}
+
+/* ==========================
+   HEADER & NAV
+   ========================== */
+.site-header {
+  border-bottom: 1px solid var(--muted);
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.site-logo {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Divider (optional decorative bar) */
+.divider {
+  flex: 1;
+  height: 2px;
+  margin: 0 var(--gap);
+  background: var(--muted);
+}
+
+/* Site title */
+.site-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--text);
+}
+
+/* NAVIGATION */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--gap);
+}
+
+/* Hamburger (hidden on desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: var(--text);
+  border-radius: 2px;
+}
+
+/* Main nav (links) */
+.site-nav .nav-list {
+  list-style: none;
+  display: flex;
+  gap: var(--gap);
+}
+.nav-list a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: bold;
+  padding: 0.5rem;
+  transition: background 0.2s ease;
+}
+.nav-list a:hover {
+  background: var(--muted);
+  border-radius: 4px;
+}
+.nav-list a.active {
+  border-bottom: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+/* ==========================
+   HERO
+   ========================== */
+.hero img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: var(--gap);
+}
+
+/* Slider dots (you can style them however you like) */
+.slider-dots {
+  text-align: center;
+  margin-top: var(--gap);
+}
+.slider-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 4px;
+  background: var(--muted);
+  border-radius: 50%;
+}
+.slider-dots .dot.active {
+  background: var(--primary);
+}
+
+/* ==========================
+   FEATURES (Home page)
+   ========================== */
+.features {
+  display: flex;
+  gap: var(--gap);
+  margin-top: var(--gap);
+}
+.card {
+  flex: 1;
+  background: var(--muted);
+  border-radius: 8px;
+  padding: var(--gap);
+  text-align: left;
+}
+.card h3 {
+  background: var(--primary);
+  color: #fff;
+  margin: calc(-1 * var(--gap)) calc(-1 * var(--gap)) var(--gap);
+  padding: 0.5rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.card p {
+  margin-top: var(--gap);
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+/* ==========================
+   PRODUCTS GRID
+   ========================== */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--gap);
+  margin-top: var(--gap);
+}
+.product-card {
+  background: var(--muted);
+  border-radius: 8px;
+  overflow: hidden;
+  padding: var(--gap);
+  display: flex;
+  flex-direction: column;
+}
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.product-card h3 {
+  margin: var(--gap) 0 0.5rem;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+.product-card p {
+  flex-grow: 1;
+  font-size: 0.9rem;
+  margin-bottom: var(--gap);
+  color: var(--text);
+}
+.product-card strong {
+  display: block;
+  margin-bottom: calc(var(--gap) / 2);
+  color: var(--text);
+}
+/* “More info” button */
+.button {
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+.button:hover {
+  background: darken(var(--primary), 10%);
+}
+
+/* ==========================
+   DEVELOPERS PAGE
+   ========================== */
+.section-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--text);
+  padding-bottom: 0.5rem;
+  margin-bottom: var(--gap);
+  color: var(--text);
+}
+.developers-grid {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: var(--gap);
+  align-items: start;
+  margin-bottom: var(--gap);
+}
+.profiles {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+.profile-item {
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  color: var(--text);
+}
+.profile-item img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+}
+.profile-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.main-image img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+/* ==========================
+   COMMUNITY PAGE
+   ========================== */
+.community-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--gap);
+  margin-top: var(--gap);
+}
+.community-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.community-image .caption {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: var(--text);
+}
+.community-text {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--text);
+}
+.community-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+.community-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.community-card .caption {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: var(--text);
+}
+
+/* ==========================
+   SUPPORT PAGE
+   ========================== */
+/* Use a slightly different header style */
+.support-header {
+  background: var(--primary);
+}
+.support-header .header-top,
+.support-header .site-nav {
+  background: transparent;
+}
+.support-header .nav-list a {
+  color: var(--text);
+}
+.support-header .nav-list a.active {
+  color: #fff;
+}
+.support-header .nav-list a.active::after {
+  background: #fff; /* underline for active */
+}
+.support-banner {
+  padding: var(--gap) 0 var(--gap * 2);
+}
+.support-banner h2 {
+  color: var(--text);
+  font-size: 1.75rem;
+  margin-bottom: var(--gap);
+}
+.support-banner input {
+  width: 100%;
+  max-width: 600px;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+}
+.support-cards {
+  display: flex;
+  gap: var(--gap);
+  margin: var(--gap * 2) 0;
+}
+.support-cards .card {
+  flex: 1;
+  text-align: center;
+  background: var(--muted);
+  border-radius: 8px;
+  padding: var(--gap);
+}
+.support-cards .card img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+}
+.support-cards .card p {
+  margin-top: var(--gap);
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+/* ==========================
+   ABOUT US PAGE
+   ========================== */
+.about-hero {
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  margin: var(--gap) 0;
+}
+.rotated-label {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--text);
+}
+.hero-image {
+  flex: 1;
+}
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+.about-text-content {
+  background: var(--muted);
+  color: var(--text);
+  border-radius: 16px;
+  padding: var(--gap);
+  margin-bottom: var(--gap);
+}
+.about-text-content p {
+  margin-bottom: var(--gap);
+}
+
+/* ==========================
+   PRODUCT DETAIL PAGE
+   ========================== */
+.detail-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--gap);
+  margin: var(--gap) 0;
+}
+.detail-info {
+  flex: 2;
+  color: var(--text);
+}
+.detail-info h2 {
+  margin-bottom: var(--gap);
+  color: var(--text);
+}
+.detail-info p {
+  margin-bottom: var(--gap);
+}
+.detail-info ul {
+  list-style: disc inside;
+  margin-top: var(--gap);
+}
+.detail-info li {
+  margin-bottom: calc(var(--gap) / 2);
+}
+.buy-button {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  margin: var(--gap) 0;
+}
+.detail-model {
+  flex: 1;
+  text-align: right;
+  color: var(--text);
+}
+.detail-model h2 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+/* ==========================
+   FOOTER
+   ========================== */
+.site-footer {
+  border-top: 1px solid var(--muted);
+  text-align: center;
+  padding: var(--gap) 0;
+  color: var(--text);
+}
+
+/* ==========================
+   RESPONSIVE MEDIA QUERIES
+   ========================== */
+/* ---------- Global very-small screens ---------- */
+@media (max-width: 480px) {
+  .container {
+    padding: 0.5rem;
+  }
+  .nav-list {
+    gap: 0.5rem;
+  }
+  .features,
+  .developers-grid,
+  .community-grid,
+  .support-cards {
+    gap: 0.5rem;
+  }
+}
+
+/* ---------- Hamburger menu breakpoint ---------- */
+@media (max-width: 768px) {
+  /* Show hamburger, hide nav-list by default */
+  .hamburger {
+    display: flex;
+  }
+  .site-nav .nav-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    flex-direction: column;
+    display: none;
+    margin: 0;
+    padding: var(--gap) 0;
+    list-style: none;
+    gap: var(--gap);
+    border-top: 1px solid var(--muted);
+  }
+  .nav-list.open {
+    display: flex;
+  }
+  .nav-list li {
+    text-align: center;
+  }
+  .nav-list li a {
+    display: block;
+    padding: 0.75rem 1rem;
+  }
+
+  /* Stack developer profiles vertically */
+  .developers-grid {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .profile-item,
+  .profile-item:nth-child(even) {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-item img {
+    margin: 0 auto;
+  }
+
+  /* Collapse community grid */
+  .community-grid {
+    grid-template-columns: 1fr;
+  }
+  .community-cards {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .community-card {
+    width: 48%;
+  }
+
+  /* Collapse support cards */
+  .support-cards {
+    flex-direction: column;
+  }
+
+  /* Collapse about‐hero to vertical */
+  .about-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .rotated-label {
+    writing-mode: horizontal-tb;
+    transform: rotate(0);
+    margin: var(--gap) 0;
+  }
+
+  /* Collapse product detail to vertical */
+  .detail-content {
+    flex-direction: column;
+  }
+  .detail-model {
+    text-align: left;
+    margin-top: var(--gap);
+  }
+}
+
+/* ---------- Products grid adjustments ---------- */
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Lower h2/h3 font on small dev screens ---------- */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .profile-item p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ---------- Misc extra image max-width ---------- */
+.hero img,
+.about-hero img,
+.community-image img,
+.product-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* ============================
+   Restrict Preview Image Size
+   ============================ */
+.detail-model img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;    /* ← adjust this value as needed */
+  display: block;
+  margin: 0 auto;      /* center it horizontally */
+}

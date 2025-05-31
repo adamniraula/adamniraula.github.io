@@ -1,0 +1,130 @@
+<!-- File: projects/part4/developers.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+  <title>Part 4 – Developers | NVIDIA Pulse</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- =========================
+       HEADER (with hamburger)
+       ========================= -->
+  <header class="site-header">
+    <div class="header-top container">
+      <img
+        src="images/nvidia pulse.png"
+        alt="NVIDIA Pulse Logo"
+        class="site-logo"
+      />
+      <div class="divider"></div>
+      <h1 class="site-title">NVIDIA Pulse</h1>
+    </div>
+
+    <div class="nav-container container">
+      <button
+        class="hamburger"
+        id="hamburgerBtn"
+        aria-label="Toggle Navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav">
+        <ul class="nav-list" id="navList">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="developers.html" class="active">Developers</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================
+       MAIN CONTENT: Developers
+       ========================= -->
+  <main class="container">
+    <h2 class="section-title">Meet the Team</h2>
+
+    <section class="developers-grid">
+      <!-- Left column: Developer Profiles -->
+      <div class="profiles">
+        <!-- Profile 1 -->
+        <div class="profile-item">
+          <img src="images/jane.png" alt="Jane Doe" />
+          <div class="profile-text">
+            <h3>Jane Doe</h3>
+            <p>
+              Lead Graphics Engineer with 8 years at NVIDIA, specializing in
+              real-time ray tracing on RTX architecture. Jane spearheaded the
+              DLSS 3 integration and teaches GPU optimization workshops.
+            </p>
+          </div>
+        </div>
+
+        <!-- Profile 2 -->
+        <div class="profile-item">
+          <img src="images/shane.png" alt="Carlos Nguyen" /> <!-- Shane, Carlos (i'm lost) -->
+          <div class="profile-text">
+            <h3>Carlos Nguyen</h3>
+            <p>
+              Senior AI Architect focused on GPU‐accelerated deep learning
+              pipelines. Carlos designed Tensor Core engines for AI
+              inference and co-authored the CUDA Toolkit documentation.
+            </p>
+          </div>
+        </div>
+
+        <!-- Profile 3 -->
+        <div class="profile-item">
+          <img src="images/priya.png" alt="Priya Shah" />
+          <div class="profile-text">
+            <h3>Priya Shah</h3>
+            <p>
+              Software Developer Advocate who builds sample code, livestreams
+              dev tutorials, and runs the official NVIDIA Developer GitHub
+              repos. Priya’s recent talk showcased multi‐GPU scaling in Vulkan.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right column: Team Photo / Overview -->
+      <div class="main-image">
+        <img
+          src="images/team.png"
+          alt="NVIDIA Pulse Development Team"
+        />
+      </div>
+    </section>
+  </main>
+
+  <!-- ===========
+       FOOTER
+       =========== -->
+  <footer class="site-footer">
+    <div class="container">© 2025 Adam Niraula</div>
+  </footer>
+
+  <!-- =========================
+       JAVASCRIPT: Hamburger Toggle
+       ========================= -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.getElementById("hamburgerBtn");
+      const navList = document.getElementById("navList");
+      hamburger.addEventListener("click", () => {
+        navList.classList.toggle("open");
+      });
+    });
+  </script>
+</body>
+</html>

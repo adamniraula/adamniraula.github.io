@@ -1,0 +1,135 @@
+<!-- File: projects/part4/products.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+  <title>Part 4 – Products | NVIDIA Pulse</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- =========================
+       HEADER (with hamburger)
+       ========================= -->
+  <header class="site-header">
+    <div class="header-top container">
+      <img
+        src="images/nvidia pulse.png"
+        alt="NVIDIA Pulse Logo"
+        class="site-logo"
+      />
+      <div class="divider"></div>
+      <h1 class="site-title">NVIDIA Pulse</h1>
+    </div>
+
+    <div class="nav-container container">
+      <button
+        class="hamburger"
+        id="hamburgerBtn"
+        aria-label="Toggle Navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav">
+        <ul class="nav-list" id="navList">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="developers.html">Developers</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===============
+       MAIN CONTENT
+       =============== -->
+  <main class="container">
+    <h2 class="section-title">Our Products</h2>
+
+    <section class="products-grid">
+      <!-- Product Card 1 -->
+      <div class="product-card">
+        <img
+          src="images/5060.png"
+          alt="GeForce RTX 5060"
+        />
+        <h3>GeForce RTX 5060</h3>
+        <p>
+          The GeForce RTX 5060 delivers 12 TFLOPs of FP32 compute for
+          exceptional 1440p gaming, equipped with 3072 CUDA cores, 8 GB
+          GDDR6, and full hardware‐accelerated ray tracing with DLSS 3.0
+          support.
+        </p>
+        <strong>Price: $349 USD</strong>
+        <a href="preview.html?product=5060" class="button"
+          >More Info</a
+        >
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="product-card">
+        <img
+          src="images/5070ti.png"
+          alt="GeForce RTX 4070 Ti"
+        />
+        <h3>GeForce RTX 4070 Ti</h3>
+        <p>
+          Built on Ada Lovelace, the RTX 4070 Ti features 7680 CUDA cores,
+          12 GB GDDR6X, and 90 RT cores—ideal for 4K gaming and creative
+          workloads at an affordable price point.
+        </p>
+        <strong>Price: $799 USD</strong>
+        <a href="preview.html?product=4070ti" class="button"
+          >More Info</a
+        >
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="product-card">
+        <img
+          src="images/a4500.png"
+          alt="NVIDIA RTX A4500"
+        />
+        <h3>NVIDIA RTX A4500</h3>
+        <p>
+          A workstation‐class GPU with 7168 CUDA cores, 20 GB GDDR6, and
+          ECC memory, the RTX A4500 excels at AI inference, 3D rendering,
+          and simulation workloads.
+        </p>
+        <strong>Price: $2399 USD</strong>
+        <a href="preview.html?product=A4500" class="button"
+          >More Info</a
+        >
+      </div>
+    </section>
+  </main>
+
+  <!-- ===========
+       FOOTER
+       =========== -->
+  <footer class="site-footer">
+    <div class="container">© 2025 Adam Niraula</div>
+  </footer>
+
+  <!-- =========================
+       JAVASCRIPT: Hamburger Toggle
+       ========================= -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.getElementById("hamburgerBtn");
+      const navList = document.getElementById("navList");
+      hamburger.addEventListener("click", () => {
+        navList.classList.toggle("open");
+      });
+    });
+  </script>
+</body>
+</html>

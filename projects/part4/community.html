@@ -1,0 +1,132 @@
+<!-- File: projects/part4/community.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+  <title>Part 4 – Community | NVIDIA Pulse</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- =========================
+       HEADER (with hamburger)
+       ========================= -->
+  <header class="site-header">
+    <div class="header-top container">
+      <img
+        src="images/nvidia pulse.png"
+        alt="NVIDIA Pulse Logo"
+        class="site-logo"
+      />
+      <div class="divider"></div>
+      <h1 class="site-title">NVIDIA Pulse</h1>
+    </div>
+
+    <div class="nav-container container">
+      <button
+        class="hamburger"
+        id="hamburgerBtn"
+        aria-label="Toggle Navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav">
+        <ul class="nav-list" id="navList">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="developers.html">Developers</a></li>
+          <li><a href="community.html" class="active">Community</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================
+       MAIN CONTENT: Community
+       ========================= -->
+  <main class="container">
+    <h2 class="section-title">Community & Events</h2>
+
+    <section class="community-grid">
+      <!-- Left column: Main Image with caption -->
+      <div class="community-image">
+        <img
+          src="images/community.png"
+          alt="Annual NVIDIA Pulse Hackathon"
+        />
+        <div class="caption">Annual NVIDIA Pulse Hackathon, 2024</div>
+      </div>
+
+      <!-- Middle column: About text -->
+      <div class="community-text">
+        <p>
+          NVIDIA Pulse is a thriving global community of over 25,000 members
+          passionate about real-time graphics, AI, and simulation. We host
+          monthly meetups—both virtual and in-person—showcasing the latest
+          breakthroughs in GPU acceleration and collaborative hackathons.
+        </p>
+        <p>
+          Join our Slack workspace to discuss optimization tricks, trade
+          benchmarking results, and share your personal projects built with
+          CUDA and Vulkan. Whether you’re a student crafting your first ray
+          tracer or an industry veteran architecting multi‐GPU clusters, there’s
+          a place for you here.
+        </p>
+        <p>
+          Upcoming events include the 2025 GPU Graphics Summit in San Francisco
+          (June 15–17), AI & Ray Tracing Workshop at SIGGRAPH (July 20–22), and
+          monthly “Code & Coffee” livestreams where we build demos from
+          scratch.
+        </p>
+      </div>
+
+      <!-- Right column: Community cards -->
+      <div class="community-cards">
+        <!-- Card 1 -->
+        <div class="community-card">
+          <img
+            src="images/meeting.png"
+            alt="Monthly GPU Graphics Meetup"
+          />
+          <div class="caption">Monthly GPU Graphics Meetup (Online)</div>
+        </div>
+        <!-- Card 2 -->
+        <div class="community-card">
+          <img
+            src="images/ai.png"
+            alt="SIGGRAPH AI & Ray Tracing Workshop"
+          />
+          <div class="caption">SIGGRAPH AI & Ray Tracing Workshop</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===========
+       FOOTER
+       =========== -->
+  <footer class="site-footer">
+    <div class="container">© 2025 Adam Niraula</div>
+  </footer>
+
+  <!-- =========================
+       JAVASCRIPT: Hamburger Toggle
+       ========================= -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.getElementById("hamburgerBtn");
+      const navList = document.getElementById("navList");
+      hamburger.addEventListener("click", () => {
+        navList.classList.toggle("open");
+      });
+    });
+  </script>
+</body>
+</html>
