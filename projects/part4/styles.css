@@ -379,9 +379,13 @@ body {
 /* ==========================
    ABOUT US PAGE
    ========================== */
+/* ==========================
+   ABOUT US PAGE
+   ========================== */
 .about-hero {
   display: flex;
   align-items: center;
+  justify-content: center; /* center the three flex-children horizontally */
   gap: var(--gap);
   margin: var(--gap) 0;
 }
@@ -391,9 +395,11 @@ body {
   font-weight: bold;
   font-size: 1rem;
   color: var(--text);
+  /* on large screens, keep it vertical; we’ll collapse to horizontal via media query */
 }
 .hero-image {
-  flex: 1;
+  flex: none;           /* override earlier flex:1 so it does not stretch */
+  max-width: 600px;     /* optional cap—adjust as desired or remove if you want full width */
 }
 .hero-image img {
   width: 100%;
@@ -614,3 +620,13 @@ body {
   display: block;
   margin: 0 auto;      /* center it horizontally */
 }
+
+.support-banner {
+  padding: var(--gap) 0 var(--gap * 2);
+}
+/* add a little extra space under the input */
+.support-banner input {
+  margin-bottom: 1rem; /* or var(--gap) if you prefer */
+}
+
+
