@@ -1,0 +1,82 @@
+[
+  {
+    "_id": 1,
+    "name": "Hazy IPA",
+    "brewery": "Cloud Nine Brewing Co.",
+    "type": "New England IPA",
+    "abv": 6.8,
+    "price": 7.50,
+    "description": "Juicy, unfiltered",
+    "img_name": "images/hazy-ipa.jpg"
+  },
+  {
+    "_id": 2,
+    "name": "Oatmeal Stout",
+    "brewery": "Midnight Rooster Brewery",
+    "type": "Stout",
+    "abv": 5.5,
+    "price": 6.00,
+    "description": "Rich and creamy, with notes of roasted coffee and chocolate.",
+    "img_name": "images/oatmeal-stout.jpg"
+  },
+  {
+    "_id": 3,
+    "name": "Pilsner",
+    "brewery": "Golden Tap Brewing",
+    "type": "Czech-style Pilsner",
+    "abv": 4.9,
+    "price": 5.50,
+    "description": "Crisp and clean, with a light malt backbone and moderate hop bitterness.",
+    "img_name": "images/pilsner.jpg"
+  },
+  {
+    "_id": 4,
+    "name": "Brown Ale",
+    "brewery": "Riverbank Brewery",
+    "type": "American Brown Ale",
+    "abv": 5.2,
+    "price": 6.25,
+    "description": "Nutty aroma with hints of caramel and toffee.",
+    "img_name": "images/brown-ale.jpg"
+  },
+  {
+    "_id": 5,
+    "name": "Saison",
+    "brewery": "Sunset Farmhouse Ales",
+    "type": "Farmhouse Ale",
+    "abv": 6.0,
+    "price": 7.00,
+    "description": "Dry, peppery, and slightly tart with citrus undertones.",
+    "img_name": "images/saison.jpg"
+  },
+  {
+    "_id": 6,
+    "name": "Belgian Tripel",
+    "brewery": "Old World Brewing",
+    "type": "Belgian Tripel",
+    "abv": 8.5,
+    "price": 8.50,
+    "description": "Sweet malt profile, spicy yeast character, and a strong finish.",
+    "img_name": "images/belgian-tripel.jpg"
+  },
+  {
+    "_id": 7,
+    "name": "IPA",
+    "brewery": "Hop Horizon",
+    "type": "West Coast IPA",
+    "abv": 7.2,
+    "price": 7.75,
+    "description": "Bold pine and citrus hops with a firm bitter backbone.",
+    "img_name": "images/west-coast-ipa.jpg"
+  },
+  {
+    "_id": 8,
+    "name": "Porter",
+    "brewery": "Midnight Rooster Brewery",
+    "type": "Robust Porter",
+    "abv": 5.8,
+    "price": 6.50,
+    "description": "Roasted malt flavors, dark chocolate notes, and a smooth finish.",
+    "img_name": "images/porter.jpg"
+  }
+]
