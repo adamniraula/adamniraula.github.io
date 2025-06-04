@@ -1,4 +1,6 @@
-/* styles.css */
+/*─────────────────────────────────────────────────────────────────*/
+/*                        styles.css                               */
+/*─────────────────────────────────────────────────────────────────*/
 
 /* Base */
 body {
@@ -7,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 #content {
     width: 90%;
     max-width: 1200px;
@@ -21,6 +24,7 @@ header, footer, .main-area {
     border-radius: 8px;
     text-align: center;
 }
+
 #author {
     text-align: center;
     font-weight: bold;
@@ -34,18 +38,24 @@ header, footer, .main-area {
     margin-bottom: 20px;
 }
 
-/* Columns */
+/*─────────────────────────────────────────────────────────────────*/
+/* 1) ORIGINAL “Columns” / “one” RULES - Restores Assignment layout */
+/*─────────────────────────────────────────────────────────────────*/
 .columns {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
 }
+
 .one {
-    flex: 1 1 200px;
+    flex: 1 1 200px; /* <- exactly how it was originally */
 }
 
-/* Assignment Items */
-.assignment-item img, .project-box img {
+/*─────────────────────────────────────────────────────────────────*/
+/* 2) ASSIGNMENT ITEMS (unchanged)                                  */
+/*─────────────────────────────────────────────────────────────────*/
+.assignment-item img,
+.project-box img {
     display: block;
     margin: 0 auto 10px;
     width: 200px;
@@ -53,31 +63,72 @@ header, footer, .main-area {
     object-fit: cover;
     border-radius: 4px;
 }
-.assignment-item h3, .project-box h3 {
+
+.assignment-item h3,
+.project-box h3 {
     margin-top: 0;
     font-size: 1.2em;
 }
-.assignment-item p, .project-box p {
+
+.assignment-item p,
+.project-box p {
     text-align: center;
     font-size: 0.9em;
     line-height: 1.4;
 }
 
-/* Project Box Hover */
+/*─────────────────────────────────────────────────────────────────*/
+/* 3) PROJECT BOX HOVER (unchanged except for later overrides)      */
+/*─────────────────────────────────────────────────────────────────*/
 .project-box {
     background-color: #ECF0F1;
     padding: 20px;
     border-radius: 6px;
     text-align: left;
     transition: transform 0.2s;
+
+    /* We will override max-width/width for Projects below */
 }
+
 .project-box:hover {
     transform: translateY(-4px);
 }
 
-/* Media Queries */
+/*─────────────────────────────────────────────────────────────────*/
+/* 4) REMOVE UNDERLINE ON PROJECT LINKS                             */
+/*─────────────────────────────────────────────────────────────────*/
+#projects .project-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*─────────────────────────────────────────────────────────────────*/
+/* 5) PROJECTS-ONLY GRID OVERRIDES                                  */
+/*                                                                  */
+/*    These rules apply “only inside” #projects,                        */
+/*    leaving assignments alone.                                      */
+/*─────────────────────────────────────────────────────────────────*/
+#projects .columns {
+    /* Distribute space so exactly three cards fit per row */
+    justify-content: space-between;
+}
+
+#projects .one {
+    /* Instead of flex:1 1 200px, make each card take ~30% of row */
+    flex: 1 1 30%;
+    min-width: 250px;            /* never shrink narrower than 250px */
+    display: flex;               /* center each .project-box */
+    justify-content: center;
+}
+
+#projects .project-box {
+    /* Pin every project card to max 300px wide */
+    max-width: 300px;
+    width: 100%;
+}
+
+
 @media screen and (max-width: 768px) {
     .columns {
         flex-direction: column;
     }
-}
