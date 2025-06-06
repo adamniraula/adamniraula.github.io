@@ -1,5 +1,4 @@
 // script.js
-// all arrow functions & consts per in-class conventions
 
 // ICE CREAM: click column to add a new bold line
 const iceCol    = document.querySelector('.ice-col');

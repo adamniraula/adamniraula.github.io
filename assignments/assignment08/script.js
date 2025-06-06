@@ -1,4 +1,4 @@
-// 1. Define your array of images (with titles & real src filenames)
+
 const images = [
   { title: 'Party Time',       src: 'images/birthday.jpg' },
   { title: 'Dressed Up',       src: 'images/clown.jpg' },
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const pImg    = document.getElementById('popup-img');
   const close   = document.getElementById('close');
 
-  // 2. Build gallery cards
+  // Build gallery cards
   images.forEach((item, idx) => {
     const card = document.createElement('div');
     card.className = 'card';
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <img src="${item.src}" alt="${item.title}">
       <div class="overlay"><h3>${item.title}</h3></div>
     `;
-    // 3. Click → open popup
+    // Click → open popup
     card.addEventListener('click', () => {
       pTitle.textContent = item.title;
       pImg.src = item.src;
@@ -33,12 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
     gallery.appendChild(card);
   });
 
-  // 4. Close button
+  // Close button
   close.addEventListener('click', () => {
     popup.classList.add('hidden');
   });
 
-  // (Optional) click outside content to close
+  // click outside content to close
   popup.addEventListener('click', e => {
     if (e.target === popup) popup.classList.add('hidden');
   });

@@ -1,4 +1,4 @@
-// — Tabs Toggle —
+//Tabs Toggle
 const tabSpeed = document.getElementById('tab-speed');
 const tabArt   = document.getElementById('tab-art');
 const secSpeed = document.getElementById('speeding');
@@ -13,7 +13,7 @@ tabArt.addEventListener('click', () => {
   secSpeed.classList.remove('active');
 });
 
-// — Exercise 1: Bike Animation —
+// Exercise 1: Bike Animation 
 const slider = document.getElementById('speed-slider');
 const btnGo   = document.getElementById('btn-go');
 const btnStop = document.getElementById('btn-stop');
@@ -34,7 +34,7 @@ btnStop.addEventListener('click', () => {
   clearInterval(anim);
 });
 
-// — Exercise 2: CSS Art Drawer —
+//Exercise 2: CSS Art Drawer 
 const artBtns = document.querySelectorAll('.art-btn');
 const artArea = document.getElementById('art-area');
 

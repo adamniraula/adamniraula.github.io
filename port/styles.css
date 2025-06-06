@@ -1,7 +1,3 @@
-/*─────────────────────────────────────────────────────────────────*/
-/*                        styles.css                               */
-/*─────────────────────────────────────────────────────────────────*/
-
 /* Base */
 body {
     font-family: 'Georgia', serif;
@@ -86,8 +82,7 @@ header, footer, .main-area {
     border-radius: 6px;
     text-align: left;
     transition: transform 0.2s;
-
-    /* We will override max-width/width for Projects below */
+    /* We will override max-width/width for Projects and Node below */
 }
 
 .project-box:hover {
@@ -105,8 +100,7 @@ header, footer, .main-area {
 /*─────────────────────────────────────────────────────────────────*/
 /* 5) PROJECTS-ONLY GRID OVERRIDES                                  */
 /*                                                                  */
-/*    These rules apply “only inside” #projects,                        */
-/*    leaving assignments alone.                                      */
+/* These rules apply “only inside” #projects, leaving assignments alone. */
 /*─────────────────────────────────────────────────────────────────*/
 #projects .columns {
     /* Distribute space so exactly three cards fit per row */
@@ -127,8 +121,31 @@ header, footer, .main-area {
     width: 100%;
 }
 
+/*─────────────────────────────────────────────────────────────────*/
+/* 6) NODE SECTION: force a “card‐style” width exactly like projects */
+/*─────────────────────────────────────────────────────────────────*/
+#node .main-area.columns {
+  /* Center that single Node card */
+  justify-content: center;
+}
 
+#node .project-item.one {
+  /* Make the Node card behave like a project card (~30% width, min 250px) */
+  flex: 1 1 30%;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+}
+
+#node .project-box {
+  /* Pin the inner box to max 300px, same as your other project‐boxes */
+  max-width: 300px;
+  width: 100%;
+}
+
+/* Responsive breakpoint */
 @media screen and (max-width: 768px) {
     .columns {
         flex-direction: column;
     }
+}

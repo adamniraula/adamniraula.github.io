@@ -40,14 +40,12 @@ body {
   cursor: pointer;
 }
 
-/* gallery grid */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   gap: 1rem;
 }
 
-/* card */
 .card {
   position: relative;
   border: 6px solid var(--accent);

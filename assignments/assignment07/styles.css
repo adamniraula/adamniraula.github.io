@@ -28,7 +28,6 @@ button {
   margin-top: 20px;
 }
 
-/* each house is pure CSS: */
 .house {
   display: inline-block;
   margin: 0 10px;
@@ -57,7 +56,6 @@ button {
   left: 35px;
 }
 
-/* exercise section */
 #exercise-section {
   margin-top: 30px;
 }

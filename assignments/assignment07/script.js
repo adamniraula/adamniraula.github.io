@@ -1,4 +1,4 @@
-// 1) Draw 6 CSS houses
+
 document.getElementById('draw-houses-btn').onclick = () => {
   const ctr = document.getElementById('houses-container');
   ctr.innerHTML = '';            // clear old
@@ -21,12 +21,11 @@ document.getElementById('draw-houses-btn').onclick = () => {
     ctr.appendChild(h);
   }
 
-  // now show the exercise controls
   document.getElementById('exercise-section').style.display = 'block';
 };
 
 
-// 2) Exercise animation (local images only!)
+// 2) Exercise animation 
 const stretches = [
   'images/stretch1.png',
   'images/stretch2.png',

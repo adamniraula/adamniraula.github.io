@@ -379,13 +379,9 @@ body {
 /* ==========================
    ABOUT US PAGE
    ========================== */
-/* ==========================
-   ABOUT US PAGE
-   ========================== */
 .about-hero {
   display: flex;
   align-items: center;
-  justify-content: center; /* center the three flex-children horizontally */
   gap: var(--gap);
   margin: var(--gap) 0;
 }
@@ -395,11 +391,9 @@ body {
   font-weight: bold;
   font-size: 1rem;
   color: var(--text);
-  /* on large screens, keep it vertical; we’ll collapse to horizontal via media query */
 }
 .hero-image {
-  flex: none;           /* override earlier flex:1 so it does not stretch */
-  max-width: 600px;     /* optional cap—adjust as desired or remove if you want full width */
+  flex: 1;
 }
 .hero-image img {
   width: 100%;
@@ -616,9 +610,9 @@ body {
 .detail-model img {
   width: 100%;
   height: auto;
-  max-width: 400px;    /* ← adjust this value as needed */
+  max-width: 400px;   
   display: block;
-  margin: 0 auto;      /* center it horizontally */
+  margin: 0 auto;     
 }
 
 .support-banner {
@@ -629,4 +623,14 @@ body {
   margin-bottom: 1rem; /* or var(--gap) if you prefer */
 }
 
+/* 1) Center the three items */
+.about-hero {
+  justify-content: center;
+}
 
+/* 2) Stop the image from flexing outwards */
+.about-hero .hero-image {
+  flex: none;
+  /* Optional: constrain how wide the image can get */
+  max-width: 600px; 
+}
