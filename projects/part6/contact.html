@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contact Me</title>
+  <style>
+    /* Reset & base */
+    * {box-sizing: border-box; margin: 0; padding: 0;}
+    body {font-family: Arial, sans-serif; line-height: 1.6; color: #333;}
+    header {background: #222; color: #fff; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center;}
+    header .logo {font-size: 1.2rem; font-weight: bold;}
+    nav ul {list-style: none; display: flex; gap: 15px;}
+    nav a {color: #fff; text-decoration: none; font-size: 1rem;}
+    nav a.active {text-decoration: underline;}
+    #menu-toggle {display: none; background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer;}
+
+    .container {max-width: 800px; margin: 30px auto; padding: 0 20px;}
+    h1 {text-align: center; margin-bottom: 20px;}
+
+    .grid {display: grid; gap: 20px; grid-template-columns: 1fr;}
+    @media(min-width: 768px) { .grid {grid-template-columns: 1fr 1fr;} }
+
+    .contact-form {background: #f9f9f9; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+    .contact-form label {display: block; margin-bottom: 5px; font-weight: bold;}
+    .contact-form input, .contact-form textarea {width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;}
+    .contact-form button {padding: 10px 20px; font-size: 1rem; border: none; border-radius: 4px; background: #007BFF; color: #fff; cursor: pointer;}
+    .contact-form button:disabled {background: #aaa; cursor: default;}
+    .form-message {display: none; margin-top: 10px; font-weight: bold;}
+    .form-message.success {color: green;}
+    .form-message.error {color: red;}
+
+    .iframe-container {position: relative; width: 100%; padding-top: 56.25%;}
+    .iframe-container iframe {position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">My Beer Project</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="beers.html">Beers</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Contact Us</h1>
+    <div class="grid">
+      <form id="contact-form" class="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+        <!-- Message box is hidden until submission -->
+        <div id="form-message" class="form-message"></div>
+      </form>
+
+      <div>
+        <div class="iframe-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18..." loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const messageBox = document.getElementById('form-message');
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      const btn = form.querySelector('button');
+      btn.disabled = true;
+
+      const data = {
+        name: form.name.value,
+        email: form.email.value,
+        subject: form.subject.value,
+        message: form.message.value
+      };
+
+      try {
+        // Replace YOUR_FORM_ID with your actual Formspree ID
+        const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        if (!res.ok) throw new Error();
+
+        messageBox.textContent = 'Thank you! Your message has been sent.';
+        messageBox.className = 'form-message success';
+        messageBox.style.display = 'block';
+        form.reset();
+      } catch {
+        messageBox.textContent = 'Oops! There was a problem sending your message.';
+        messageBox.className = 'form-message error';
+        messageBox.style.display = 'block';
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
+
+<!-- I used https://formspree.io/ Replace YOUR_FORM_ID below with your own Formspree endpoint ID-->
